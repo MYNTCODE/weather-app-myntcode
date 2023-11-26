@@ -8,9 +8,11 @@ import rain_icon from "../Assets/rain.png";
 import snow_icon from "../Assets/snow.png";
 import wind_icon from "../Assets/wind.png";
 import humidity_icon from "../Assets/humidity.png";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const WeatherApp = () => {
-  let api_key = "d955d07df4488b7a53a1b79da94c25ad";
+  let api_key = process.env.REACT_APP_API_KEY;
 
   const [wicon, setWicon] = useState(cloud_icon);
 
